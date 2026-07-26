@@ -2,199 +2,109 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#020914" />
-  <meta name="description" content="ماركتون تبني لمؤسسات التدريب والتعليم أنظمة تشغيل وقيادة ونمو مستدام." />
-  <title>Marktone — من التشغيل إلى القيادة</title>
+  <meta name="description" content="ماركتون شريك النمو والتشغيل لمؤسسات التدريب والتعليم." />
+  <title>Marktone — منظومات نمو تقود النتائج</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.new.css" />
 </head>
 <body>
-  <canvas id="webgl" aria-hidden="true"></canvas>
-  <div class="ambient-grid" aria-hidden="true"></div>
-
   <header class="site-header" data-header>
-    <a class="brand" href="#home" aria-label="العودة إلى الرئيسية">
+    <a class="brand" href="#home" aria-label="Marktone الرئيسية">
       <svg class="brand-logo" viewBox="0 0 310 72" role="img" aria-label="Marktone">
-        <defs><linearGradient id="marktone-gradient" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#03c8e8"/><stop offset=".52" stop-color="#05c7e8"/><stop offset="1" stop-color="#ffd45d"/></linearGradient></defs>
-        <path d="M8 43 C20 43 22 14 32 14 C42 14 42 59 52 59 C63 59 68 7 79 7 C90 7 91 48 105 48" fill="none" stroke="url(#marktone-gradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="124" y="49" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Marktone</text>
+        <defs><linearGradient id="brandGradient" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#03c8e8"/><stop offset=".56" stop-color="#03c8e8"/><stop offset="1" stop-color="#ffd45d"/></linearGradient></defs>
+        <path d="M8 43C20 43 22 14 32 14c10 0 10 45 20 45 11 0 16-52 27-52 11 0 12 41 26 41" fill="none" stroke="url(#brandGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="124" y="49" fill="#fff" font-family="Arial,sans-serif" font-size="34" font-weight="700">Marktone</text>
       </svg>
     </a>
     <nav class="desktop-nav" aria-label="التنقل الرئيسي">
       <a class="active" href="#home">الرئيسية</a>
-      <a href="#challenge">التحدي</a>
-      <a href="#system">منظومتنا</a>
-      <a href="#method">منهجيتنا</a>
-      <a href="#impact">الأثر</a>
-      <a href="#partners">شركاؤنا</a>
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#success">قصص النجاح</a>
+      <a href="#contact">تواصل معنا</a>
     </nav>
-    <button class="header-cta" type="button" data-open-form>احجز جلسة تشخيص</button>
+    <button class="header-cta" type="button" data-open-form>احجز استشارة مجانية <span>←</span></button>
     <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false"><span></span></button>
     <aside class="mobile-nav" aria-hidden="true">
       <a href="#home">الرئيسية <span>01</span></a>
-      <a href="#challenge">التحدي <span>02</span></a>
-      <a href="#system">منظومتنا <span>03</span></a>
-      <a href="#method">منهجيتنا <span>04</span></a>
-      <a href="#impact">الأثر <span>05</span></a>
-      <a href="#partners">شركاؤنا <span>06</span></a>
-      <button type="button" data-open-form>احجز جلسة تشخيص</button>
+      <a href="#about">من نحن <span>02</span></a>
+      <a href="#services">خدماتنا <span>03</span></a>
+      <a href="#success">قصص النجاح <span>04</span></a>
+      <a href="#contact">تواصل معنا <span>05</span></a>
+      <button type="button" data-open-form>احجز استشارة مجانية</button>
     </aside>
   </header>
-
   <main>
-    <section class="hero section" id="home" data-scene="0">
-      <div class="hero-content">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">نحو مؤسسات تعليمية قيادية ومستدامة</p>
-          <h1>نحوّل موظفيك إلى مدراء،<br />ومديريك إلى <em>قادة.</em></h1>
-          <p class="hero-lead">نبني لمؤسسات التدريب والتعليم أنظمة تشغيل متكاملة، ترفع كفاءة الفريق وتحول النمو من مجهود فردي إلى منظومة مستدامة.</p>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>نحوّل المراكز<br />التدريبية إلى<br />منظومات <em>نمو</em><br /><span>تقود النتائج.</span></h1>
+          <p>نحن في Marktone شريكك الاستراتيجي للنمو والتشغيل. نساعد المراكز التعليمية على بناء أنظمة عمل ذكية، وتحسين التجربة، وزيادة الأثر لتحقيق نمو مستدام وقابل للقياس.</p>
           <div class="hero-actions">
-            <button class="button primary" type="button" data-open-form>احجز جلسة تشخيص <span>←</span></button>
-            <a class="button ghost" href="#system">اكتشف كيف نعمل <span>←</span></a>
+            <button class="button primary" type="button" data-open-form>احجز استشارة مجانية <span>←</span></button>
+            <a class="button secondary" href="#services">استكشف خدماتنا <span>←</span></a>
           </div>
-        </div>
-        <div class="hero-legend reveal" aria-label="محاور المنظومة">
-          <span>القيادة</span><span>التسويق والنمو</span><span>العمليات</span><span>المبيعات</span><span>البيانات</span>
-        </div>
-      </div>
-      <div class="scroll-cue" aria-hidden="true"><span>اكتشف الرحلة</span><i></i></div>
-    </section>
-
-    <section class="challenge section section-solid" id="challenge" data-scene="1">
-      <div class="section-inner challenge-layout">
-        <div class="section-intro reveal">
-          <span class="section-no">01</span>
-          <p class="eyebrow">التحدي الحقيقي</p>
-          <h2>النمو لا يتوقف بسبب نقص الجهد، بل لأن المؤسسة تعمل بدون نظام يقودها.</h2>
-        </div>
-        <div class="friction-list">
-          <article class="friction reveal"><span>01</span><div><h3>الاعتماد على شخص واحد</h3><p>القرارات والمعرفة والمتابعة تتوقف عند غيابه.</p></div></article>
-          <article class="friction reveal"><span>02</span><div><h3>تسويق ومبيعات منفصلان</h3><p>رسائل كثيرة، لكن رحلة العميل غير مترابطة.</p></div></article>
-          <article class="friction reveal"><span>03</span><div><h3>قرارات مبنية على الحدس</h3><p>بيانات موجودة، لكنها لا تتحول إلى قرار واضح.</p></div></article>
-          <article class="friction reveal"><span>04</span><div><h3>تشغيل غير موثق</h3><p>عمليات تعتمد على الذاكرة بدل نظام قابل للتوسع.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="system section" id="system" data-scene="2">
-      <div class="section-inner system-layout">
-        <div class="system-sticky reveal">
-          <span class="section-no">02</span>
-          <p class="eyebrow">نظام Marktone المتكامل</p>
-          <h2>خمس منظومات تعمل كنسيج واحد.</h2>
-          <p>نربط الرؤية بالبيانات، والتسويق بالمبيعات، والعمليات بالقيادة؛ حتى تصبح النتائج قابلة للتكرار والتوسع.</p>
-        </div>
-        <div class="system-spine" aria-label="منظومات ماركتون الخمس">
-          <article class="system-item reveal"><b>01</b><i></i><div><h3>البيانات والتحليلات</h3><p>لوحة قرار واضحة، مؤشرات عملية، وقراءة مستمرة لما يتحرك فعلًا.</p></div></article>
-          <article class="system-item reveal"><b>02</b><i></i><div><h3>التسويق والمبيعات</h3><p>طلب مؤهل، متابعة منظمة، وتحويل أوضح من الاهتمام إلى التسجيل.</p></div></article>
-          <article class="system-item reveal"><b>03</b><i></i><div><h3>المحتوى والاتصالات</h3><p>رسائل تبني الثقة وتشرح القيمة قبل أن تطلب من العميل الشراء.</p></div></article>
-          <article class="system-item reveal"><b>04</b><i></i><div><h3>العمليات والأنظمة</h3><p>أدوار ومسؤوليات وإجراءات تمنع ضياع الوقت وتقلل الاعتماد على الأفراد.</p></div></article>
-          <article class="system-item reveal"><b>05</b><i></i><div><h3>القيادة وتطوير الأعمال</h3><p>نرفع كفاءة الفريق، ونبني قدرات داخلية تقود النمو باستقلالية.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="method section section-solid" id="method" data-scene="3">
-      <div class="section-inner">
-        <div class="section-intro method-heading reveal">
-          <span class="section-no">03</span>
-          <p class="eyebrow">منهجيتنا</p>
-          <h2>من الوضوح إلى أثر قابل للقياس.</h2>
-        </div>
-        <div class="method-track">
-          <article class="method-step reveal"><span>01</span><h3>التشخيص</h3><p>نفهم الواقع كما هو، لا كما يبدو في التقارير.</p></article>
-          <article class="method-step reveal"><span>02</span><h3>تصميم النظام</h3><p>نحوّل التحديات إلى أولويات وخطة تشغيل قابلة للتنفيذ.</p></article>
-          <article class="method-step reveal"><span>03</span><h3>البناء والتطبيق</h3><p>ننشئ الأدوات والإجراءات ونطبّقها مع الفريق.</p></article>
-          <article class="method-step reveal"><span>04</span><h3>تمكين الفريق</h3><p>ننقل المعرفة ونرفع قدرة الموظفين على القيادة.</p></article>
-          <article class="method-step reveal"><span>05</span><h3>القياس والتحسين</h3><p>نراجع النتائج ونطوّر النظام باستمرار.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="impact section" id="impact" data-scene="4">
-      <div class="section-inner impact-layout">
-        <div class="impact-copy reveal">
-          <span class="section-no">04</span>
-          <p class="eyebrow">أثر نقيسه</p>
-          <h2>لا نبيع نشاطًا أكثر.<br />نبني قدرة مؤسسية أقوى.</h2>
-          <p>الأرقام التالية مؤقتة لحين استبدالها بنتائج موثقة من الحالات المعتمدة.</p>
-        </div>
-        <div class="metrics" aria-label="مؤشرات أثر مؤقتة">
-          <article class="metric reveal"><strong>2.7×</strong><span>زيادة في كفاءة العمليات التشغيلية</span></article>
-          <article class="metric reveal"><strong>+45%</strong><span>تحسن في إنتاجية فرق العمل</span></article>
-          <article class="metric reveal"><strong>+50%</strong><span>زيادة في دقة اتخاذ القرار</span></article>
-          <article class="metric reveal"><strong>-28%</strong><span>انخفاض في تكلفة التشغيل</span></article>
-          <article class="metric reveal"><strong>+35%</strong><span>زيادة في الإيرادات المتكررة</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="partners section section-solid" id="partners" data-scene="5">
-      <div class="section-inner">
-        <div class="partners-heading reveal">
-          <span class="section-no">05</span>
-          <p class="eyebrow">شركاء النجاح</p>
-          <h2>علاقات ممتدة، لا مشاريع عابرة.</h2>
-        </div>
-        <div class="logo-marquee reveal">
-          <div class="logo-track">
-            <figure class="partner-mark"><span class="door-mark"></span><b>REEF</b><small>SKILLS</small></figure>
-            <figure class="partner-mark sky-mark"><b>SKY</b><small>ELITE</small></figure>
-            <figure class="partner-mark miran-mark"><span>مِران</span><small>MIRAN</small></figure>
-            <figure class="partner-mark people-mark"><span>◯</span><span>◯</span><span>◯</span><small>شريك نجاح</small></figure>
-            <figure class="wordmark">مسارتك<small>MASARATEK</small></figure>
-            <figure class="wordmark latin">RAST<small>ELITE ACADEMY</small></figure>
+          <div class="hero-points" aria-label="مزايا ماركتون">
+            <div><i class="target-icon"></i><span>استراتيجيات مخصصة</span></div>
+            <div><i class="gear-icon"></i><span>أنظمة تشغيلية ذكية</span></div>
+            <div><i class="chart-icon"></i><span>نتائج قابلة للقياس</span></div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="final-cta section" id="contact" data-scene="6">
-      <div class="section-inner final-layout">
-        <div class="final-copy reveal">
-          <p class="eyebrow">الخطوة التالية</p>
-          <h2>جاهز للانتقال من التشغيل إلى القيادة؟</h2>
-          <p>ابدأ بجلسة تشخيص تكشف أين تتعطل المنظومة، وما الخطوة التي تصنع أكبر فرق.</p>
-          <button class="button primary" type="button" data-open-form>احجز جلسة تشخيص <span>←</span></button>
+    <section class="content-section" id="about">
+      <div class="section-wrap split">
+        <div class="section-copy"><span>من نحن</span><h2>نبني القدرة داخل المؤسسة، لا نعتمد على مجهود مؤقت.</h2></div>
+        <p>ماركتون شريك نمو وتشغيل متخصص في مؤسسات التدريب والتعليم. نربط القيادة بالعمليات والتسويق والمبيعات والبيانات داخل منظومة واحدة تقود النتائج.</p>
+      </div>
+    </section>
+    <section class="content-section darker" id="services">
+      <div class="section-wrap">
+        <div class="section-copy centered"><span>خدماتنا</span><h2>منظومة متكاملة تعمل كنسيج واحد.</h2></div>
+        <div class="service-grid">
+          <article><b>01</b><h3>الاستراتيجية والبيانات</h3><p>قرارات أوضح مبنية على واقع المؤسسة ومؤشراتها.</p></article>
+          <article><b>02</b><h3>التسويق والمبيعات</h3><p>رحلة عميل مترابطة من الوعي حتى التسجيل والمتابعة.</p></article>
+          <article><b>03</b><h3>العمليات والأنظمة</h3><p>أدوار وإجراءات تقلل الاعتماد على الأفراد.</p></article>
+          <article><b>04</b><h3>القيادة وتطوير الفريق</h3><p>نرفع كفاءة الموظفين ونبني قدرات داخلية مستدامة.</p></article>
         </div>
-        <div class="final-signal reveal" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+    </section>
+    <section class="content-section" id="success">
+      <div class="section-wrap split">
+        <div class="section-copy"><span>قصص النجاح</span><h2>علاقات ممتدة، لا مشاريع عابرة.</h2></div>
+        <p>نشارك عملاءنا رحلة النمو من التشخيص إلى التنفيذ والتحسين المستمر، بهدف بناء نظام يستمر بعد انتهاء أي مشروع.</p>
+      </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <div class="section-wrap contact-inner">
+        <div><span>الخطوة التالية</span><h2>ابدأ بجلسة تشخيص تكشف أين يتعطل النمو.</h2></div>
+        <button class="button primary" type="button" data-open-form>احجز استشارة مجانية <span>←</span></button>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="footer-brand">
-      <svg class="brand-logo" viewBox="0 0 310 72" role="img" aria-label="Marktone">
-        <defs><linearGradient id="marktone-gradient-footer" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#03c8e8"/><stop offset=".52" stop-color="#05c7e8"/><stop offset="1" stop-color="#ffd45d"/></linearGradient></defs>
-        <path d="M8 43 C20 43 22 14 32 14 C42 14 42 59 52 59 C63 59 68 7 79 7 C90 7 91 48 105 48" fill="none" stroke="url(#marktone-gradient-footer)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="124" y="49" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Marktone</text>
-      </svg>
-      <p>نبني مؤسسات تعليمية أكثر تميزًا واستدامة.</p>
-    </div>
-    <nav><a href="#home">الرئيسية</a><a href="#challenge">التحدي</a><a href="#system">منظومتنا</a><a href="#method">منهجيتنا</a></nav>
-    <p>© 2026 Marktone. جميع الحقوق محفوظة.</p>
+    <span>© 2026 Marktone. جميع الحقوق محفوظة.</span>
+    <span>نبني مؤسسات تعليمية أكثر تميزًا واستدامة.</span>
   </footer>
-
   <dialog class="contact-dialog" aria-labelledby="contact-title">
     <button class="dialog-close" type="button" aria-label="إغلاق">×</button>
-    <div class="dialog-copy">
-      <p class="eyebrow">جلسة تشخيص</p>
-      <h2 id="contact-title">خلّنا نفهم التحدي قبل ما نقترح الحل.</h2>
-      <p>اكتب بياناتك، وسيجهز الموقع رسالة بريد مرتبة يمكنك إرسالها مباشرة إلى فريق ماركتون.</p>
-    </div>
+    <p class="dialog-kicker">جلسة تشخيص</p>
+    <h2 id="contact-title">خلّنا نفهم التحدي قبل ما نقترح الحل.</h2>
     <form id="contact-form">
-      <label>الاسم<input name="name" autocomplete="name" minlength="2" required /></label>
-      <label>اسم الجهة<input name="organization" autocomplete="organization" minlength="2" required /></label>
-      <label>رقم الجوال<input name="phone" autocomplete="tel" inputmode="tel" minlength="7" required /></label>
-      <label>أكبر تحدٍ حالي<textarea name="challenge" rows="4" minlength="10" required></textarea></label>
-      <button class="button primary" type="submit">إرسال الطلب <span>←</span></button>
+      <label>الاسم<input name="name" autocomplete="name" required minlength="2" /></label>
+      <label>اسم الجهة<input name="organization" autocomplete="organization" required minlength="2" /></label>
+      <label>رقم الجوال<input name="phone" autocomplete="tel" inputmode="tel" required minlength="7" /></label>
+      <label>أكبر تحدٍ حالي<textarea name="challenge" rows="4" required minlength="10"></textarea></label>
+      <button class="button primary" type="submit">تجهيز رسالة التواصل <span>←</span></button>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>
   </dialog>
-
-  <script type="module" src="./script.js"></script>
+  <script src="./script.new.js"></script>
 </body>
 </html>
