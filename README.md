@@ -1,15 +1,17 @@
 # Marktone Website
 
-Production RTL website for Marktone, built from the approved desktop and mobile art direction.
+A real RTL, responsive, scroll-driven 3D website for Marktone.
 
-## Contact form
+## Live preview
 
-The contact form sends requests directly by email through the native Vercel API route at `api/contact.js`. It does not use n8n or a webhook.
+https://isuperk7.github.io/marktone-website/
 
-Set these environment variables in Vercel:
+## Architecture
 
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL` — defaults to `info@marktone.sa`
-- `CONTACT_FROM_EMAIL` — verified sender on the Marktone domain
+- Semantic HTML and responsive CSS
+- Procedural Three.js brand scene — no hero screenshot
+- Scroll-driven camera and 3D composition
+- Accessible navigation and contact dialog
+- GitHub Pages deployment through GitHub Actions
 
-A matching `.env.example` file is included in the repository.
+The contact form currently prepares a structured email to `info@marktone.sa` without n8n or a webhook.
